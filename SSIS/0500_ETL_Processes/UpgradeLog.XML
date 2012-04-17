@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="0500_ETL_Processes">
+</Property><Property Name="Solution File" Value="\\Usrc_fileserver\sql_server\Client_USMR\Reports\SSIS\0500_ETL_Processes\0500_ETL_Processes.sln">
+</Property><Property Name="Date" Value="Wednesday, December 03, 2008">
+</Property><Property Name="Time" Value="11:45 AM">
+</Property></Properties><Event ErrorLevel="2" Project="0000_ETL_Processes" Source="0000_ETL_Processes.dtproj" Description="The operation could not be completed. The system cannot find the file specified. ">
+</Event><Event ErrorLevel="0" Project="" Source="0500_ETL_Processes.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="0500_ETL_Processes.sln" Description="Converted">
+</Event></UpgradeLog>

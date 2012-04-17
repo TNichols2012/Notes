@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "2000_Backup_Routines", "2000_Backup_Routines.dtproj", "{B30AFEC4-CB18-465D-871F-DF912E4D5C51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B30AFEC4-CB18-465D-871F-DF912E4D5C51}.Development|Default.ActiveCfg = Development
+		{B30AFEC4-CB18-465D-871F-DF912E4D5C51}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

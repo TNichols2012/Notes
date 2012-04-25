@@ -1,3 +1,5 @@
+\\192.168.3.115\e$\backups\ausint03\full
+
 BACKUP DATABASE [USRC_Main] 
 TO  DISK = N'\\asset01132\SQL_Data\USRC_AmcatSQL_Backup_USRC_Main.bak' 
 WITH NOFORMAT, INIT, NAME = N'USRC_Fileserver_Backup_USRC_Main', 

@@ -1,3 +1,37 @@
+SELECT --TOP 100
+P.ApplicationID ,
+GetDate() AS Report_Date,
+
+ISNULL ((SELECT LEFT(InputValue, 30) FROM Values3Open V3O WITH (NOLOCK) 
+		 WHERE P.ApplicationID = V3O.RowID AND V3O.ElementID = 3), '') AS LAST_NAME,
+
+ISNULL ((SELECT LEFT(InputValue, 30) FROM Values3Open V3O WITH (NOLOCK) 
+		 WHERE P.ApplicationID = V3O.RowID AND V3O.ElementID = 1), '') AS FIRST_NAME
+
+FROM	Main18CurrentRepeat M18CR WITH(NOLOCK)
+INNER JOIN	Main18 M18 WITH(NOLOCK) 
+ON M18.RowID = M18CR.LastRowID
+
+INNER JOIN	LinkedGFAObjects LGO18To5 WITH(NOLOCK) 
+ON M18.RowID = LGO18To5.primaryGFARowID
+
+INNER JOIN	Position P WITH(NOLOCK) 
+ON LGO18To5.linkedGFARowID = P.positionID
+
+INNER JOIN	LinkedGFAObjects LGO18To19 WITH(NOLOCK) 
+ON M18.RowID = LGO18To19.primaryGFARowID
+
+WHERE	1=1
+AND   M18CR.status = 17592186044416
+AND	LGO18To5.primaryGFAID = 18 AND LGO18To5.linkedGFAID = 5
+AND	LGO18To19.primaryGFAID = 18 AND LGO18To19.linkedGFAID = 19
+--AND	M18.createDate >= CAST(FLOOR(CAST(DATEADD(dd, -90, GETDATE()) AS float)) AS datetime)
+--AND	M18.createDate < CAST(FLOOR(CAST(DATEADD(dd, +1, GETDATE()) AS float)) AS datetime)
+
+
+--AND P.ApplicationID = 178063
+
+
 IF EXISTS	(
 		SELECT TABLE_NAME 
 		FROM Information_Schema.Tables
